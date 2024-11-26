@@ -7,11 +7,46 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Page Header -->
     <h1>Welcome to the Finance App</h1>
-    <p>This is a prototype of a personal finance application developed by Justin Kim.
-        This app will recommend investment strategies based on user information.  You can view
-        the GitHub repository
+    <!-- Introduction -->
+    <p>This is a prototype of a personal finance application developed by Justin Kim. This app 
+        will help users with little to no personal finance knowledge simulate and visualize savings 
+        growth, specifically for retirement or general savings, in a simple and user-friendly way. 
+        You can view the GitHub repository
         <a href="https://github.com/iluvcoding123/finance_app_prototype.git" target="_blank">here</a>.
     </p>
+
+    <!-- Input Section -->
+<div class="input-section">
+    <div>
+        <label for="starting-amount">Starting Amount ($):</label>
+        <input type="number" id="starting-amount" placeholder="Enter starting amount">
+    </div>
+
+    <div>
+        <label for="monthly-savings">Monthly Savings Amount ($):</label>
+        <input type="number" id="monthly-savings" placeholder="Enter amount">
+    </div>
+
+    <div>
+        <label for="interest-rate">Annual Interest Rate (%):</label>
+        <input type="number" id="interest-rate" placeholder="Enter rate">
+    </div>
+
+    <div>
+        <label for="time-period">Time Period (Years):</label>
+        <input type="number" id="time-period" placeholder="Enter years">
+    </div>
+
+    <button id="calculate-btn">Calculate</button>
+</div>
+
+    <!-- Placeholder for Results -->
+    <div id="result">
+
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
