@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- Page Header -->
-    <h1>Welcome to the Finance App</h1>
+    <h1>Welcome to the Personal Finance App</h1>
     <!-- Introduction -->
     <p>This is a prototype of a personal finance application developed by Justin Kim. This app 
         will help users with little to no personal finance knowledge simulate and visualize savings 
@@ -18,35 +18,40 @@
     </p>
 
     <!-- Input Section -->
-<div class="input-section">
-    <div>
-        <label for="starting-amount">Starting Amount ($):</label>
-        <input type="number" id="starting-amount" placeholder="Enter starting amount">
+    <div class="input-box">
+        <h2>Compounding Interest Calculator</h2>
+        <div>
+            <label for="starting-amount">Starting Amount ($):</label>
+            <input type="number" id="starting-amount" placeholder="Enter amount">
+        </div>
+    
+        <div>
+            <label for="monthly-savings">Monthly Savings Amount ($):</label>
+            <input type="number" id="monthly-savings" placeholder="Enter amount">
+        </div>
+    
+        <div>
+            <label for="interest-rate">Annual Interest Rate (%):</label>
+            <input type="number" id="interest-rate" placeholder="Enter rate">
+        </div>
+    
+        <div>
+            <label for="time-period">Time Period (Years):</label>
+            <input type="number" id="time-period" placeholder="Enter years">
+        </div>
+        
+        <div><button id="calculate-btn">Calculate</button></div>
+        
+        <div><button id="reset-btn">Reset</button></div>
     </div>
-
-    <div>
-        <label for="monthly-savings">Monthly Savings Amount ($):</label>
-        <input type="number" id="monthly-savings" placeholder="Enter amount">
-    </div>
-
-    <div>
-        <label for="interest-rate">Annual Interest Rate (%):</label>
-        <input type="number" id="interest-rate" placeholder="Enter rate">
-    </div>
-
-    <div>
-        <label for="time-period">Time Period (Years):</label>
-        <input type="number" id="time-period" placeholder="Enter years">
-    </div>
-
-    <button id="calculate-btn">Calculate</button>
-</div>
 
     <!-- Placeholder for Results -->
     <div id="result">
-
+        <h3 id="result-header" style="display: none;">Results:</h3>
+        <canvas id="savings-chart" width="400" height="200"></canvas>
     </div>
-
+        
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>

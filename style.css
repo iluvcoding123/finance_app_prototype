@@ -1,9 +1,100 @@
+/* General Body Styling */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
-    
-    .input-section div {
-        margin-bottom: 15px;
-    }
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text */
+}
+
+/* Hyperlink Styling */
+a {
+    color: #1E90FF; /* Bright blue for links */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make it stand out */
+}
+a:hover {
+    color: #63B8FF; /* Lighter blue on hover */
+    text-decoration: underline; /* Add underline for emphasis */
+}
+a:visited {
+    color: #9ACDFF; /* Softer blue for visited links */
+}
+
+/* Input Box Styling */
+.input-box {
+    max-width: 400px; /* Limit the width of the box */
+    margin: 20px auto; /* Center the box horizontally */
+    padding: 20px; /* Add space inside the box */
+    border: 1px solid #333333; /* Darker border for subtle effect */
+    border-radius: 10px; /* Round the corners */
+    background-color: #1e1e1e; /* Slightly lighter dark background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Title Styling Within the Input Box */
+.input-box h2 {
+    text-align: center; /* Center the title inside the box */
+    color: #e0e0e0; /* Softer white for contrast */
+    margin-bottom: 15px; /* Add spacing below the title */
+}
+
+/* Label Styling */
+.input-box label {
+    font-weight: bold; /* Make labels bold */
+    display: block; /* Ensure each label is on its own line */
+    margin-bottom: 5px; /* Add spacing below labels */
+    color: #cfcfcf; /* Light gray for labels */
+}
+
+/* Spacing Between Input Sections */
+.input-box div {
+    margin-bottom: 15px; /* Add spacing between input fields */
+}
+
+/* Input Field Styling */
+.input-box input {
+    width: 100%; /* Make inputs stretch to fill the box */
+    padding: 10px; /* Add padding inside the input fields */
+    border: 1px solid #444444; /* Darker border for inputs */
+    border-radius: 5px; /* Round the input edges */
+    background-color: #2a2a2a; /* Dark input background */
+    color: #ffffff; /* Light text */
+    font-size: 14px; /* Adjust font size */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Input Field Placeholder Styling */
+.input-box input::placeholder {
+    color: #888888; /* Light gray placeholder text */
+}
+
+/* Button Styling */
+.input-box button {
+    display: block;
+    width: 100%; /* Make button span the full width */
+    padding: 10px;
+    background-color: #007BFF; /* Blue background for button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Button Hover Effect */
+.input-box button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Result Placeholder Styling */
+#result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #333333; /* Subtle border for results */
+    border-radius: 5px;
+    background-color: #1e1e1e; /* Same as input box background */
+    color: #ffffff; /* Light text */
+    text-align: left; /* Align results text to the left */
 }
