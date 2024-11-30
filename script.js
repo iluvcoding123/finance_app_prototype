@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Display savings and interest earned in result section
         document.getElementById("result").innerHTML += `
-            <p>Total savings after ${timePeriod} years: <strong>$${totalSavings.toFixed(2)}</strong></p>
-            <p>Interest earned: <strong>$${interestEarned.toFixed(2)}</strong></p>
+            <p>Total savings after ${timePeriod} years: <strong>$${Number(totalSavings.toFixed(2)).toLocaleString()}</strong></p>
+            <p>Interest earned: <strong>$${Number(interestEarned.toFixed(2)).toLocaleString()}</strong></p>
         `;
 
         // Render the line chart
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 datasets: [{
                     label: "Savings Over Time",
                     data: monthlyBalances,
-                    borderColor: "blue",
+                    borderColor: "white",
                     borderWidth: 2,
                     fill: false
                 }]
