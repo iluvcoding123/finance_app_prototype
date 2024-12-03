@@ -40,13 +40,15 @@ document.addEventListener("DOMContentLoaded", () => {
         new Chart(ctx, {
             type: "line",
             data: {
-                labels: Array.from({ length: monthlyBalances.length }, (_, i) => `Month ${i}`), // X-axis labels
+                labels: Array.from({ length: totalMonths/12 + 1 }, (_, i) => `Year ${i}`), // X-axis labels
                 datasets: [{
                     label: "Savings Over Time",
-                    data: monthlyBalances,
+                    data: monthlyBalances.filter((_, i) => i % 12 === 0), // Only keep yearly data points
                     borderColor: "white",
-                    borderWidth: 2,
-                    fill: false
+                    borderWidth: 2.5,
+                    fill: false,
+                    pointRadius: 0,
+                    pointHoveRadius: 0
                 }]
             },
             options: {
@@ -54,14 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 plugins: {
                     legend: {
                         display: true,
-                        position: "top"
+                        position: "top",
+                        labels: {
+                            usePointStyle: false,
+                            boxWidth: 30
+                        }
                     }
                 },
                 scales: {
                     x: {
                         title: {
                             display: true,
-                            text: "Time (Months)"
+                            text: "Time (Years)"
                         }
                     },
                     y: {
